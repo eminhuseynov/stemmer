@@ -108,7 +108,8 @@ class Stemmer:
             if selected_stem == "":
                 selected_stem = word
             # Append the stem of the current word to the list of stems
-            list_of_stems.append(selected_stem)
+            if len(selected_stem)>2:
+                list_of_stems.append(selected_stem)
             
         # Return the updated list.
         return list_of_stems
